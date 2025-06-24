@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Calendar } from "lucide-react";
 import { NewsCardSkeleton } from "@/components/Skeleton";
 import { useLoadingState } from "@/hooks/useImageLoader";
+import aiBiotechImage from "/ai_biotech.png";
 
 const Index = () => {
   const isNewsLoading = useLoadingState(0);
@@ -37,7 +38,7 @@ const Index = () => {
       <section 
         className="relative py-20 lg:py-32 h-[70vh] lg:h-[90vh] flex items-center"
         style={{
-          backgroundImage: `url('/ai_biotech.png')`,
+          backgroundImage: `url(${aiBiotechImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
