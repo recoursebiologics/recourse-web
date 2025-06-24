@@ -2,8 +2,12 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Calendar } from "lucide-react";
+import { NewsCardSkeleton } from "@/components/Skeleton";
+import { useLoadingState } from "@/hooks/useImageLoader";
 
 const Index = () => {
+  const isNewsLoading = useLoadingState(0);
+  
   const newsItems = [
     {
       title: "Recourse Bio at Bio International Conference",
@@ -77,33 +81,41 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up animation-delay-300">
-            {newsItems.map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105 border-teal-100">
-                <CardHeader className="pb-3">
-                  <div className="flex items-center text-sm text-gray-500 mb-2">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    {item.date}
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-gray-900 leading-tight">
-                    {item.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                    {item.summary}
-                  </p>
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-teal-600 hover:text-teal-700 text-sm font-medium transition-colors"
-                  >
-                    Read on LinkedIn
-                    <ExternalLink className="w-3 h-3 ml-1" />
-                  </a>
-                </CardContent>
-              </Card>
-            ))}
+            {isNewsLoading ? (
+              // Show skeleton loaders while content is loading
+              Array.from({ length: 3 }).map((_, index) => (
+                <NewsCardSkeleton key={`skeleton-${index}`} />
+              ))
+            ) : (
+              // Show actual news cards once loaded
+              newsItems.map((item, index) => (
+                <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105 border-teal-100">
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center text-sm text-gray-500 mb-2">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {item.date}
+                    </div>
+                    <CardTitle className="text-lg font-semibold text-gray-900 leading-tight">
+                      {item.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      {item.summary}
+                    </p>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-teal-600 hover:text-teal-700 text-sm font-medium transition-colors"
+                    >
+                      Read on LinkedIn
+                      <ExternalLink className="w-3 h-3 ml-1" />
+                    </a>
+                  </CardContent>
+                </Card>
+              ))
+            )}
           </div>
           
           <div className="text-center mt-12">

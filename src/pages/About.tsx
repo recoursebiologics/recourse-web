@@ -3,8 +3,13 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Linkedin, ExternalLink } from "lucide-react";
+import { TeamCardSkeleton } from "@/components/Skeleton";
+import { useLoadingState } from "@/hooks/useImageLoader";
+import { LazyImage } from "@/components/LazyImage";
 
 const About = () => {
+  const isTeamLoading = useLoadingState(0);
+  
   const teamMembers = [
     {
       name: "John Westwick",
@@ -96,15 +101,20 @@ const About = () => {
           <div className="animate-fade-in-up animation-delay-600">
             {/* First row - 3 cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-              {teamMembers.slice(0, 3).map((member, index) => (
+              {isTeamLoading ? (
+                Array.from({ length: 3 }).map((_, index) => (
+                  <TeamCardSkeleton key={`skeleton-top-${index}`} />
+                ))
+              ) : (
+                teamMembers.slice(0, 3).map((member, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow flex flex-col">
                   <CardContent className="p-6 flex flex-col flex-grow">
                     <div className="text-center flex-grow flex flex-col">
-                      <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-4 border-teal-100">
-                        <img
+                      <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-4 border-teal-100 relative">
+                        <LazyImage
                           src={member.headshot}
                           alt={member.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full"
                         />
                       </div>
                       
@@ -122,12 +132,13 @@ const About = () => {
                       
                       <div className="flex justify-center space-x-3 mb-4">
                         {member.logos.map((logo, logoIndex) => (
-                          <img
-                            key={logoIndex}
-                            src={logo}
-                            alt="Company logo"
-                            className="h-8 w-auto opacity-70"
-                          />
+                          <div key={logoIndex} className="h-8 w-auto">
+                            <LazyImage
+                              src={logo}
+                              alt="Company logo"
+                              className="h-8 w-auto opacity-70"
+                            />
+                          </div>
                         ))}
                       </div>
                       
@@ -151,21 +162,27 @@ const About = () => {
                     </div>
                   </CardContent>
                 </Card>
-              ))}
+              ))
+              )}
             </div>
             
             {/* Second row - 2 cards centered */}
             <div className="flex justify-center">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
-                {teamMembers.slice(3, 5).map((member, index) => (
+                {isTeamLoading ? (
+                  Array.from({ length: 2 }).map((_, index) => (
+                    <TeamCardSkeleton key={`skeleton-bottom-${index}`} />
+                  ))
+                ) : (
+                  teamMembers.slice(3, 5).map((member, index) => (
                   <Card key={index + 3} className="hover:shadow-lg transition-shadow flex flex-col">
                     <CardContent className="p-6 flex flex-col flex-grow">
                       <div className="text-center flex-grow flex flex-col">
-                        <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-4 border-teal-100">
-                          <img
+                        <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-4 border-teal-100 relative">
+                          <LazyImage
                             src={member.headshot}
                             alt={member.name}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full"
                           />
                         </div>
                         
@@ -183,12 +200,13 @@ const About = () => {
                         
                         <div className="flex justify-center space-x-3 mb-4">
                           {member.logos.map((logo, logoIndex) => (
-                            <img
-                              key={logoIndex}
-                              src={logo}
-                              alt="Company logo"
-                              className="h-8 w-auto opacity-70"
-                            />
+                            <div key={logoIndex} className="h-8 w-auto">
+                              <LazyImage
+                                src={logo}
+                                alt="Company logo"
+                                className="h-8 w-auto opacity-70"
+                              />
+                            </div>
                           ))}
                         </div>
                         
@@ -212,7 +230,8 @@ const About = () => {
                       </div>
                     </CardContent>
                   </Card>
-                ))}
+                ))
+                )}
               </div>
             </div>
           </div>

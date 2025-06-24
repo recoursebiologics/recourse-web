@@ -1,7 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { LazyImage } from "@/components/LazyImage";
+import { PipelineImageSkeleton } from "@/components/Skeleton";
+import { useImageLoader } from "@/hooks/useImageLoader";
 
 const Pipeline = () => {
+  const { isLoaded: isPipelineImageLoaded, hasError: pipelineImageError } = useImageLoader("/Pipeline.png");
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 relative flex flex-col">
       <Navigation />
@@ -16,11 +21,22 @@ const Pipeline = () => {
           </div>
           
           <div className="mb-12">
-            <img
-              src="/Pipeline.png"
-              alt="Recourse Biologics Pipeline"
-              className="w-full h-auto object-contain rounded-xl shadow-lg animate-scale-in animation-delay-300"
-            />
+            {!isPipelineImageLoaded && !pipelineImageError ? (
+              <PipelineImageSkeleton />
+            ) : pipelineImageError ? (
+              <div className="w-full h-96 bg-gray-100 rounded-xl shadow-lg flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <p className="text-lg font-medium">Pipeline Image Unavailable</p>
+                  <p className="text-sm">Please try refreshing the page</p>
+                </div>
+              </div>
+            ) : (
+              <LazyImage
+                src="/Pipeline.png"
+                alt="Recourse Biologics Pipeline"
+                className="w-full h-auto object-contain rounded-xl shadow-lg animate-scale-in animation-delay-300"
+              />
+            )}
           </div>
 
           {/* Pipeline Explanation */}
