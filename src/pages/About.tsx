@@ -40,15 +40,23 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      {/* Background logo */}
+      <div 
+        className="fixed inset-0 opacity-5 bg-center bg-no-repeat bg-contain pointer-events-none"
+        style={{
+          backgroundImage: `url('/lovable-uploads/a9d8c7b6-e5f4-3c2d-1b9a-8e7f6d5c4b3a.png')`
+        }}
+      />
+      
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
+      <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              About <span className="text-blue-600">Recourse Biologics</span>
+              About <span className="text-green-600">Recourse Biologics</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Pioneering the next generation of precision immunotherapeutics 
@@ -59,7 +67,7 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-16">
+      <section className="py-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -74,7 +82,7 @@ const About = () => {
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
                   Recourse Biologics is committed to advancing new and improved therapies 
-                  for oncology. Our lead molecule is <strong className="text-blue-600">RB101</strong>, 
+                  for oncology. Our lead molecule is <strong className="text-green-600">RB101</strong>, 
                   a first-in-class immunotherapeutic that increases professional killer cell 
                   persistence, memory formation, and cytotoxicity without systemic toxicity 
                   or exhaustion.
@@ -82,7 +90,7 @@ const About = () => {
                 <p>
                   In addition to RB101, Recourse Biologics has created an improved method 
                   of targeting and redirecting cytotoxic lymphocytes within the tumor 
-                  microenvironment using our <strong className="text-blue-600">bispecific 
+                  microenvironment using our <strong className="text-green-600">bispecific 
                   antibody platform</strong>.
                 </p>
               </div>
@@ -92,7 +100,7 @@ const About = () => {
       </section>
 
       {/* Vision Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
@@ -104,8 +112,8 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">1</span>
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-green-600">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Innovation</h3>
               <p className="text-gray-600">
@@ -114,8 +122,8 @@ const About = () => {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-600">2</span>
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-emerald-600">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Safety</h3>
               <p className="text-gray-600">
@@ -124,8 +132,8 @@ const About = () => {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">3</span>
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-teal-600">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Impact</h3>
               <p className="text-gray-600">
@@ -137,7 +145,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16">
+      <section className="py-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -153,7 +161,7 @@ const About = () => {
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="text-center">
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <div className="w-24 h-24 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                       <span className="text-2xl font-bold text-white">
                         {member.name.split(' ').map(n => n[0]).join('')}
                       </span>
@@ -163,7 +171,7 @@ const About = () => {
                       {member.name}
                     </h3>
                     
-                    <p className="text-blue-600 font-medium mb-3">
+                    <p className="text-green-600 font-medium mb-3">
                       {member.title}
                     </p>
                     
@@ -197,13 +205,13 @@ const About = () => {
       </section>
 
       {/* Technology Section */}
-      <section className="py-16 bg-blue-600">
+      <section className="py-16 bg-green-600 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Cutting-Edge Technology
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
               Our proprietary platforms represent breakthrough innovations in 
               immunotherapy design and delivery.
             </p>
@@ -213,7 +221,7 @@ const About = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">
                   RB101 Platform
                 </h3>
-                <p className="text-blue-100">
+                <p className="text-green-100">
                   First-in-class immunotherapeutic designed to enhance killer cell 
                   persistence and memory formation without exhaustion.
                 </p>
@@ -223,7 +231,7 @@ const About = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Bispecific Antibody Platform
                 </h3>
-                <p className="text-blue-100">
+                <p className="text-green-100">
                   Advanced targeting system for redirecting cytotoxic lymphocytes 
                   within the tumor microenvironment.
                 </p>

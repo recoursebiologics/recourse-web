@@ -7,18 +7,26 @@ import { ArrowRight, Target, Shield, Zap } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      {/* Background logo */}
+      <div 
+        className="fixed inset-0 opacity-5 bg-center bg-no-repeat bg-contain pointer-events-none"
+        style={{
+          backgroundImage: `url('/lovable-uploads/a9d8c7b6-e5f4-3c2d-1b9a-8e7f6d5c4b3a.png')`
+        }}
+      />
+      
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20 lg:py-32">
+      <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Primed for{" "}
-                  <span className="text-blue-600">Precision</span>
+                  <span className="text-green-600">Precision</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Harnessing the body's tumor-killing cells with first-in-class 
@@ -27,7 +35,7 @@ const Index = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Button asChild size="lg" className="bg-green-600 hover:bg-green-700">
                   <Link to="/pipeline">
                     Explore Pipeline
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -40,7 +48,7 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-2xl shadow-2xl flex items-center justify-center">
+              <div className="w-full h-96 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl shadow-2xl flex items-center justify-center">
                 <img
                   src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop&crop=center"
                   alt="Biotech research visualization"
@@ -48,7 +56,7 @@ const Index = () => {
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center">
-                <Target className="w-12 h-12 text-blue-600" />
+                <Target className="w-12 h-12 text-green-600" />
               </div>
             </div>
           </div>
@@ -56,7 +64,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -70,8 +78,8 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-8 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-blue-600" />
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Precision Targeting
@@ -83,8 +91,8 @@ const Index = () => {
             </div>
             
             <div className="text-center p-8 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-emerald-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Safety First
@@ -96,8 +104,8 @@ const Index = () => {
             </div>
             
             <div className="text-center p-8 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-8 h-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Enhanced Persistence
@@ -112,12 +120,12 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-green-600 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Learn More?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
             Discover how our first-in-class immunotherapeutics are transforming 
             cancer treatment.
           </p>
