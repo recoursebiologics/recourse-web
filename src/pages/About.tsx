@@ -7,6 +7,23 @@ import { TeamCardSkeleton } from "@/components/Skeleton";
 import { useLoadingState } from "@/hooks/useImageLoader";
 import { LazyImage } from "@/components/LazyImage";
 
+// Import team member headshots
+import westwickHeadshot from "/headshots/westwick.jpeg";
+import krupnickHeadshot from "/headshots/krupnick.jpg";
+import lazearHeadshot from "/headshots/lazear.jpg";
+import mooneyHeadshot from "/headshots/mooney.jpg";
+import watkinsHeadshot from "/headshots/watkins.png";
+
+// Import company logos
+import celgeneLogo from "/logos/celgene.jpg";
+import ucsdLogo from "/logos/ucsd_som.jpg";
+import courierLogo from "/logos/courier.jpg";
+import michiganLogo from "/logos/michigan_som.png";
+import upennLogo from "/logos/upenn.png";
+import dnatrixLogo from "/logos/dnatrix.png";
+import mercuryLogo from "/logos/mercury.png";
+import cmuLogo from "/logos/cmu.png";
+
 const About = () => {
   const isTeamLoading = useLoadingState(0);
   
@@ -15,40 +32,40 @@ const About = () => {
       name: "John Westwick",
       title: "PhD | Co-founder and CEO",
       linkedin: "https://www.linkedin.com/in/john-westwick-aa3a471",
-      headshot: "/headshots/westwick.jpeg",
-      logos: ["/logos/celgene.jpg", "/logos/ucsd_som.jpg"],
+      headshot: westwickHeadshot,
+      logos: [celgeneLogo, ucsdLogo],
       bio: "Senior R&D leader and CEO of multiple biotech firms, including Courier and Resonant Therapeutics. Led Courier's exit for $500M in cash and milestones."
     },
     {
       name: "Sasha Krupnick",
       title: "MD | Co-founder and President", 
       linkedin: "https://www.linkedin.com/in/alexander-krupnick-9370bb124",
-      headshot: "/headshots/krupnick.png",
-      logos: ["/logos/courier.jpg", "/logos/michigan_som.png"],
+      headshot: krupnickHeadshot,
+      logos: [courierLogo, michiganLogo],
       bio: "Professor of Surgery, University of Maryland, 20+ years of NIH funded translational research. Pioneered novel therapies to enhance immune response against tumors. Founder of Courier Therapeutics and aSKY Therapeutics, focused on precision therapies and immune modulation."
     },
     {
       name: "Eric Lazear",
       title: "PhD | Co-founder and CSO",
       linkedin: "https://www.linkedin.com/in/elazear/",
-      headshot: "/headshots/lazear.jpg",
-      logos: ["/logos/courier.jpg", "/logos/upenn.png"],
+      headshot: lazearHeadshot,
+      logos: [courierLogo, upennLogo],
       bio: "Designed RB101 and has led its development. Founder and VP of Research at Courier Therapeutics, acquired by Valo Health. Published over 30 papers and patents."
     },
     {
       name: "Brian Mooney",
       title: "MBA | Acting CFO",
       linkedin: "https://www.linkedin.com/in/brian-mooney-18541aa",
-      headshot: "/headshots/mooney.jpg",
-      logos: ["/logos/dnatrix.png"],
+      headshot: mooneyHeadshot,
+      logos: [dnatrixLogo],
       bio: "Over 30 years of senior management experience in life sciences, medical device and software industries as a CFO and COO; Managing Partner of a venture lending fund and a boutique merchant bank. Previously CFO at DNAtrix, CFO & COO at Crossflo System, Board member at multiple companies including Mira Oncology, Verras Medical, Cobalt Medical and Crossflo Systems."
     },
     {
       name: "Dan Watkins",
       title: "PhD | Co-founder and BOD Member",
       linkedin: "https://www.linkedin.com/in/dan-watkins-2880141",
-      headshot: "/headshots/watkins.png",
-      logos: ["/logos/mercury.png", "/logos/cmu.png"],
+      headshot: watkinsHeadshot,
+      logos: [mercuryLogo, cmuLogo],
       bio: "Venture Partner and co-founder, Mercury Fund. Founded multiple companies in biotech and AI. Initial investor and CEO of Courier Therapeutics. Current CEO of Pelagos Pharmaceuticals."
     }
   ];

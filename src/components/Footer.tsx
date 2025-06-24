@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Linkedin, Mail } from "lucide-react";
+import logoImage from "/Logo - Company name.png";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="/recourse-precision-web/Logo - Company name.png" 
+                src={logoImage} 
                 alt="Recourse Biologics"
                 className="h-8 w-auto mr-3"
               />
