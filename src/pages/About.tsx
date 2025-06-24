@@ -25,6 +25,7 @@ import mercuryLogo from "/logos/mercury.png";
 import cmuLogo from "/logos/cmu.png";
 
 const About = () => {
+  
   const isTeamLoading = useLoadingState(0);
   
   const teamMembers = [
