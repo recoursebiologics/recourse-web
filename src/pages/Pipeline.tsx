@@ -1,229 +1,91 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { FlaskConical, Target, Users } from "lucide-react";
 
 const Pipeline = () => {
-  const pipelineData = [
-    {
-      compound: "RB-101",
-      target: "Tumor Associated Macrophages",
-      indication: "Pancreatic Cancer",
-      stage: "IND-Enabling",
-      progress: 85,
-      mechanism: "First-in-class immunotherapeutic enhancing killer cell persistence",
-      status: "Active"
-    },
-    {
-      compound: "RTX-200",
-      target: "Tumor Associated Macrophages",
-      indication: "Ovarian Cancer",
-      stage: "Lead Optimization",
-      progress: 65,
-      mechanism: "Enhanced TAM targeting for ovarian malignancies",
-      status: "Active"
-    },
-    {
-      compound: "RTX-100",
-      target: "Regulatory T Cells",
-      indication: "Colorectal Cancer",
-      stage: "Lead Optimization", 
-      progress: 60,
-      mechanism: "Selective Treg modulation in colorectal tumors",
-      status: "Active"
-    },
-    {
-      compound: "RB-102",
-      target: "Myeloid Derived Suppressor Cells",
-      indication: "Breast Cancer",
-      stage: "Hit-to-Lead",
-      progress: 40,
-      mechanism: "MDSC targeting for enhanced immune activation",
-      status: "Active"
-    },
-    {
-      compound: "RB-BSA Platform",
-      target: "Multiple Targets",
-      indication: "Hematologic Malignancies", 
-      stage: "Discovery",
-      progress: 25,
-      mechanism: "Bispecific antibody platform for cytotoxic lymphocyte targeting",
-      status: "Active"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-white relative">
-      {/* Background logo */}
-      <div 
-        className="fixed inset-0 opacity-5 bg-center bg-no-repeat bg-contain pointer-events-none"
-        style={{
-          backgroundImage: `url('/lovable-uploads/a9d8c7b6-e5f4-3c2d-1b9a-8e7f6d5c4b3a.png')`
-        }}
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 relative flex flex-col">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-16 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="text-green-600">Pipeline</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A robust portfolio of first-in-class immunotherapeutics designed to 
-              revolutionize cancer treatment through precision targeting.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Pipeline Chart */}
+      {/* Pipeline Section */}
       <section className="py-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up">
+              Our <span className="text-teal-600">Pipeline</span>
+            </h1>
+          </div>
+          
           <div className="mb-12">
             <img
-              src="/lovable-uploads/f6e5d4c3-b2a1-9c8b-7f6e-5d4c3b2a1f9e.png"
+              src="/Pipeline.png"
               alt="Recourse Biologics Pipeline"
-              className="w-full h-auto object-contain rounded-xl shadow-lg"
+              className="w-full h-auto object-contain rounded-xl shadow-lg animate-scale-in animation-delay-300"
             />
           </div>
 
-          {/* Pipeline Stages */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FlaskConical className="w-8 h-8 text-green-600" />
+          {/* Pipeline Explanation */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-sm p-8 mb-8 animate-fade-in-up animation-delay-450">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Our Development Pipeline
+              </h2>
+              
+              <div className="space-y-6 text-gray-600 leading-relaxed">
+                <p>
+                  Recourse Biologics has assembled a robust pipeline of first-in-class immunotherapeutics 
+                  designed to harness the body's natural tumor-killing capabilities. Our approach focuses 
+                  on enhancing professional killer cell persistence, memory formation, and cytotoxicity 
+                  without the systemic toxicity associated with traditional cancer treatments.
+                </p>
+                
+                <p>
+                  <strong className="text-teal-600">RB101</strong>, our lead compound, represents a 
+                  breakthrough in immunotherapy design. Currently 12 months from IND filing, RB101 
+                  has demonstrated remarkable ability to increase killer cell persistence and memory 
+                  formation without exhaustion. This first-in-class immunotherapeutic targets tumor 
+                  associated macrophages in pancreatic cancer, addressing one of the most challenging 
+                  oncology indications.
+                </p>
+                
+                <p>
+                  Beyond RB101, our pipeline includes multiple programs targeting various immune cell 
+                  populations across different cancer types. Our <strong className="text-teal-600">bispecific 
+                  antibody platform</strong> provides an improved method of targeting and redirecting 
+                  cytotoxic lymphocytes within the tumor microenvironment, offering precision therapy 
+                  options for patients with limited treatment alternatives.
+                </p>
+                
+                <p>
+                  Each program in our pipeline is strategically designed to complement our core mission: 
+                  delivering precision immunotherapeutics that maximize therapeutic benefit while 
+                  minimizing patient burden. From discovery through clinical development, we maintain 
+                  rigorous standards for safety, efficacy, and manufacturability.
+                </p>
+                <strong className="text-teal-600">I just made this up... rewrite</strong>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Discovery</h3>
-              <p className="text-sm text-gray-600">Target identification and validation</p>
             </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-emerald-600" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up animation-delay-600">
+              <div className="bg-teal-50 rounded-lg p-6 text-center">
+                <div className="text-3xl font-bold text-teal-600 mb-2">5</div>
+                <div className="text-sm font-medium text-gray-700">Active Programs</div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Hit-to-Lead</h3>
-              <p className="text-sm text-gray-600">Lead compound optimization</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-teal-600" />
+              
+              <div className="bg-emerald-50 rounded-lg p-6 text-center">
+                <div className="text-3xl font-bold text-emerald-600 mb-2">12</div>
+                <div className="text-sm font-medium text-gray-700">Months to IND</div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">IND-Enabling</h3>
-              <p className="text-sm text-gray-600">Preclinical safety and efficacy</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-cyan-600" />
+              
+              <div className="bg-cyan-50 rounded-lg p-6 text-center">
+                <div className="text-3xl font-bold text-cyan-600 mb-2">1st</div>
+                <div className="text-sm font-medium text-gray-700">In Class</div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Clinical Trials</h3>
-              <p className="text-sm text-gray-600">Human safety and efficacy studies</p>
-            </div>
-          </div>
-
-          {/* Pipeline Table */}
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-              Development Programs
-            </h2>
-            
-            {pipelineData.map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow border-l-4 border-l-green-500">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-xl text-green-600 mb-2">
-                        {item.compound}
-                      </CardTitle>
-                      <CardDescription className="text-lg text-gray-700 mb-1">
-                        {item.indication}
-                      </CardDescription>
-                      <p className="text-sm text-gray-500">Target: {item.target}</p>
-                    </div>
-                    <Badge 
-                      variant={item.status === "Active" ? "default" : "secondary"}
-                      className="ml-4 bg-green-600 hover:bg-green-700"
-                    >
-                      {item.status}
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <p className="text-gray-600">{item.mechanism}</p>
-                    
-                    <div className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-700">
-                          Development Stage: {item.stage}
-                        </span>
-                        <span className="text-sm text-gray-500">
-                          {item.progress}% Complete
-                        </span>
-                      </div>
-                      <Progress value={item.progress} className="w-full" />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Key Features */}
-      <section className="py-16 bg-gray-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Pipeline Highlights
-            </h2>
-            <p className="text-lg text-gray-600">
-              Our innovative approach addresses key challenges in cancer immunotherapy
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Enhanced Persistence
-              </h3>
-              <p className="text-gray-600">
-                Our lead compound RB-101 significantly increases killer cell persistence 
-                without exhaustion, maintaining therapeutic activity over time.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Memory Formation
-              </h3>
-              <p className="text-gray-600">
-                Promotes robust memory T-cell formation for long-lasting immunity 
-                and potential protection against tumor recurrence.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Safety Profile
-              </h3>
-              <p className="text-gray-600">
-                Engineered to avoid systemic toxicity while maintaining potent 
-                anti-tumor activity within the tumor microenvironment.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
+      <div className="flex-grow" />
       <Footer />
     </div>
   );

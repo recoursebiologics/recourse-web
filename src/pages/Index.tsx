@@ -1,143 +1,126 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { ArrowRight, Target, Shield, Zap } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ExternalLink, Calendar } from "lucide-react";
 
 const Index = () => {
+  const newsItems = [
+    {
+      title: "Recourse Bio at Bio International Conference",
+      summary: "Company will attend conference in Boston to discuss oncology approaches and preclinical assets targeting diverse tumor indications.",
+      date: "2 weeks ago",
+      link: "https://www.linkedin.com/company/recourse-biology/"
+    },
+    {
+      title: "RecourseBio at JP Morgan Healthcare Conference",
+      summary: "Company will attend conference to discuss innovative oncology response approaches.",
+      date: "5 months ago",
+      link: "https://www.linkedin.com/company/recourse-biology/"
+    },
+    {
+      title: "RB101 Development Milestone",
+      summary: "Lead compound RB101 continues to show promising results in preclinical studies, maintaining 12-month timeline to IND filing.",
+      date: "6 months ago",
+      link: "https://www.linkedin.com/company/recourse-biology/"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-white relative">
-      {/* Background logo */}
-      <div 
-        className="fixed inset-0 opacity-5 bg-center bg-no-repeat bg-contain pointer-events-none"
-        style={{
-          backgroundImage: `url('/lovable-uploads/a9d8c7b6-e5f4-3c2d-1b9a-8e7f6d5c4b3a.png')`
-        }}
-      />
-      
+    <div className="min-h-screen bg-white relative flex flex-col">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+      <section 
+        className="relative py-20 lg:py-32 h-[70vh] lg:h-[90vh] flex items-center"
+        style={{
+          backgroundImage: `url('/ai_biotech.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Gradient overlays for text readability and top/bottom fade */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/100 via-white/90 to-transparent via-30%" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent via-20% to-white/30" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="flex justify-start">
+            <div className="max-w-lg">
+              <div className="space-y-6">
+                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight animate-fade-in-up">
                   Primed for{" "}
-                  <span className="text-green-600">Precision</span>
+                  <span className="text-teal-600">Precision</span>
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-lg lg:text-xl text-gray-700 leading-relaxed animate-fade-in-up animation-delay-300">
                   Harnessing the body's tumor-killing cells with first-in-class 
                   immunotherapeutics
                 </p>
               </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-green-600 hover:bg-green-700">
-                  <Link to="/pipeline">
-                    Explore Pipeline
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link to="/about">Learn More</Link>
-                </Button>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl shadow-2xl flex items-center justify-center">
-                <img
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop&crop=center"
-                  alt="Biotech research visualization"
-                  className="w-full h-full object-cover rounded-2xl opacity-80"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center">
-                <Target className="w-12 h-12 text-green-600" />
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-white relative">
+      {/* Gradient Separator */}
+      <div className="h-24 bg-gradient-to-b from-transparent via-teal-50 to-white" />
+
+      {/* News Section */}
+      <section className="py-16 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Revolutionary Immunotherapy
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up">
+              Latest <span className="text-teal-600">News</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our innovative approach enhances killer cell persistence, memory formation, 
-              and cytotoxicity without systemic toxicity or exhaustion.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in-up animation-delay-150">
+              Stay updated with our latest developments, conferences, and milestones
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Precision Targeting
-              </h3>
-              <p className="text-gray-600">
-                Advanced targeting mechanisms that redirect cytotoxic lymphocytes 
-                within the tumor microenvironment.
-              </p>
-            </div>
-            
-            <div className="text-center p-8 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-emerald-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Safety First
-              </h3>
-              <p className="text-gray-600">
-                Engineered for efficacy without systemic toxicity, ensuring 
-                patient safety throughout treatment.
-              </p>
-            </div>
-            
-            <div className="text-center p-8 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-teal-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Enhanced Persistence
-              </h3>
-              <p className="text-gray-600">
-                Improved killer cell persistence and memory formation for 
-                long-lasting therapeutic effects.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up animation-delay-300">
+            {newsItems.map((item, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105 border-teal-100">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center text-sm text-gray-500 mb-2">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {item.date}
+                  </div>
+                  <CardTitle className="text-lg font-semibold text-gray-900 leading-tight">
+                    {item.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    {item.summary}
+                  </p>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-teal-600 hover:text-teal-700 text-sm font-medium transition-colors"
+                  >
+                    Read on LinkedIn
+                    <ExternalLink className="w-3 h-3 ml-1" />
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <a
+              href="https://www.linkedin.com/company/recourse-biology/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-medium rounded-lg transition-colors"
+            >
+              Follow us on LinkedIn
+              <ExternalLink className="w-4 h-4 ml-2" />
+            </a>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-green-600 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Learn More?
-          </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Discover how our first-in-class immunotherapeutics are transforming 
-            cancer treatment.
-          </p>
-          <Button asChild size="lg" variant="secondary">
-            <Link to="/about">
-              Meet Our Team
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </Button>
-        </div>
-      </section>
-
+      <div className="flex-grow" />
       <Footer />
     </div>
   );

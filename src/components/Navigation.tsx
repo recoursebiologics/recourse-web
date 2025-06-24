@@ -16,14 +16,14 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className="bg-white/90 backdrop-blur-sm shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-24">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/b5c8f4e0-c24f-4c4f-9c4b-3f8a5d6e7f9g.png" 
+              src="/Logo - Company name.png" 
               alt="Recourse Biologics"
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 
@@ -33,13 +33,18 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                className={`relative px-4 py-3 text-base font-medium transition-all duration-300 group ${
                   isActive(item.path)
-                    ? "text-green-600 border-b-2 border-green-600"
-                    : "text-gray-700 hover:text-green-600"
+                    ? "text-teal-600"
+                    : "text-gray-700 hover:text-teal-600 hover:scale-105"
                 }`}
               >
-                {item.name}
+                <span className="relative z-10">{item.name}</span>
+                <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-teal-600 transition-all duration-300 ${
+                  isActive(item.path) 
+                    ? "scale-x-100" 
+                    : "scale-x-0 group-hover:scale-x-100"
+                }`} />
               </Link>
             ))}
           </div>
@@ -48,7 +53,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-green-600 transition-colors"
+              className="text-gray-700 hover:text-teal-600 transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -64,10 +69,10 @@ const Navigation = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
+                  className={`relative block px-4 py-3 text-lg font-medium transition-all duration-300 group ${
                     isActive(item.path)
-                      ? "text-green-600 bg-green-50"
-                      : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
+                      ? "text-teal-600 bg-teal-50 border-l-4 border-teal-600"
+                      : "text-gray-700 hover:text-teal-600 hover:bg-teal-50 hover:translate-x-2"
                   }`}
                 >
                   {item.name}

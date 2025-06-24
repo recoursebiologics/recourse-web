@@ -1,19 +1,25 @@
 
 import { Link } from "react-router-dom";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-100 text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-bold text-green-400 mb-4">
-              Recourse Biologics
-            </h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Advancing first-in-class immunotherapeutics to harness the body's 
-              tumor-killing cells with precision and without systemic toxicity.
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="md:col-span-2">
+            <div className="flex items-center mb-4">
+              <img 
+                src="/Logo - Company name.png" 
+                alt="Recourse Biologics"
+                className="h-8 w-auto mr-3"
+              />
+            </div>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              Recourse Biologics is committed to advancing new and improved therapies 
+              for oncology. Our lead molecule is RB101, a first-in-class immunotherapeutic 
+              that increases professional killer cell persistence, memory formation, and 
+              cytotoxicity without systemic toxicity or exhaustion.
             </p>
           </div>
           
@@ -21,17 +27,17 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link to="/" className="text-gray-600 hover:text-teal-600 transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/pipeline" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link to="/pipeline" className="text-gray-600 hover:text-teal-600 transition-colors">
                   Pipeline
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link to="/about" className="text-gray-600 hover:text-teal-600 transition-colors">
                   About
                 </Link>
               </li>
@@ -39,16 +45,31 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Connect</h4>
-            <div className="flex items-center space-x-4">
-              <Linkedin className="w-6 h-6 text-gray-300 hover:text-green-400 transition-colors cursor-pointer" />
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-3">
+              <a 
+                href="mailto:info@recoursebiologics.com"
+                className="flex items-center text-gray-600 hover:text-teal-600 transition-colors"
+              >
+                <Mail className="w-4 h-4 mr-2" />
+                info@recoursebiologics.com
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/recourse-biologics"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-gray-600 hover:text-teal-600 transition-colors"
+              >
+                <Linkedin className="w-4 h-4 mr-2" />
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <p className="text-center text-gray-400 text-sm">
-            © 2024 Recourse Biologics. All rights reserved.
+        <div className="border-t border-gray-300 mt-8 pt-8">
+          <p className="text-center text-gray-500 text-sm">
+            © 2025 Recourse Biologics. All rights reserved.
           </p>
         </div>
       </div>
