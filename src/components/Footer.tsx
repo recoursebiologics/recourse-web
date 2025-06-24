@@ -66,7 +66,7 @@ const Footer = () => {
                 info@recoursebio.com
               </a>
               <a
-                href="https://www.linkedin.com/company/recourse-biologics"
+                href="https://www.linkedin.com/company/recourse-biology"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-600 hover:text-teal-600 transition-colors"
