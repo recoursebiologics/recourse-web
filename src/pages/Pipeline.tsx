@@ -3,9 +3,10 @@ import Footer from "@/components/Footer";
 import { LazyImage } from "@/components/LazyImage";
 import { PipelineImageSkeleton } from "@/components/Skeleton";
 import { useImageLoader } from "@/hooks/useImageLoader";
+import pipelineImage from "/Pipeline.png";
 
 const Pipeline = () => {
-  const { isLoaded: isPipelineImageLoaded, hasError: pipelineImageError } = useImageLoader("/Pipeline.png");
+  const { isLoaded: isPipelineImageLoaded, hasError: pipelineImageError } = useImageLoader(pipelineImage);
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 relative flex flex-col">
@@ -32,7 +33,7 @@ const Pipeline = () => {
               </div>
             ) : (
               <LazyImage
-                src="/Pipeline.png"
+                src={pipelineImage}
                 alt="Recourse Biologics Pipeline"
                 className="w-full h-auto object-contain rounded-xl shadow-lg animate-scale-in animation-delay-300"
               />

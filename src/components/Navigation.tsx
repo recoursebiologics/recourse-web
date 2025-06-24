@@ -21,7 +21,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-24">
           <Link to="/" className="flex items-center">
             <img 
-              src="/Logo - Company name.png" 
+              src="/recourse-precision-web/Logo - Company name.png" 
               alt="Recourse Biologics"
               className="h-12 w-auto"
             />
