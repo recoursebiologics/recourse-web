@@ -1,73 +1,69 @@
-# Welcome to your Lovable project
+# Recourse Biologics Website
 
-## Project info
+Official website for Recourse Biologics - a biotechnology company advancing first-in-class immunotherapeutics for oncology.
 
-**URL**: https://lovable.dev/projects/07ea55bd-9a55-48e4-ba0c-0f968080ebba
+## About Recourse Biologics
 
-## How can I edit this code?
+Recourse Biologics is committed to advancing new and improved therapies for oncology. Our lead molecule RB101 is a first-in-class immunotherapeutic that increases professional killer cell persistence, memory formation, and cytotoxicity without systemic toxicity.
 
-There are several ways of editing your application.
+## Development
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/07ea55bd-9a55-48e4-ba0c-0f968080ebba) and start prompting.
+- Node.js 18+ and npm
+- Git
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Getting Started
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone <repository-url>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd recourse-precision-web
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run deploy` - Deploy to GitHub Pages
 
-**Use GitHub Codespaces**
+## Technology Stack
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This website is built with:
 
-## What technologies are used for this project?
+- **React** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - UI components
+- **React Router** - Navigation
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The site is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the main branch.
 
-## How can I deploy this project?
+Manual deployment:
+```sh
+npm run deploy
+```
 
-Simply open [Lovable](https://lovable.dev/projects/07ea55bd-9a55-48e4-ba0c-0f968080ebba) and click on Share -> Publish.
+## Project Structure
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```
+src/
+├── components/        # Reusable UI components
+├── pages/            # Page components
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions
+└── main.tsx          # App entry point
+```
