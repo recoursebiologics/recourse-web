@@ -9,23 +9,41 @@ import aiBiotechImage from "/ai_biotech.png";
 const Index = () => {
   const isNewsLoading = useLoadingState(0);
   
+  // Helper function to calculate relative time
+  const getRelativeTime = (dateString: string) => {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffInMs = now.getTime() - date.getTime();
+    const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+    const diffInWeeks = Math.floor(diffInDays / 7);
+    const diffInMonths = Math.floor(diffInDays / 30);
+    
+    if (diffInDays < 7) {
+      return diffInDays === 1 ? "1 day ago" : `${diffInDays} days ago`;
+    } else if (diffInWeeks < 4) {
+      return diffInWeeks === 1 ? "1 week ago" : `${diffInWeeks} weeks ago`;
+    } else {
+      return diffInMonths === 1 ? "1 month ago" : `${diffInMonths} months ago`;
+    }
+  };
+  
   const newsItems = [
     {
       title: "Recourse Bio at Bio International Conference",
       summary: "Company will attend conference in Boston to discuss oncology approaches and preclinical assets targeting diverse tumor indications.",
-      date: "2 weeks ago",
+      date: getRelativeTime("2025-06-11"),
       link: "https://www.linkedin.com/company/recourse-biology/"
     },
     {
       title: "RecourseBio at JP Morgan Healthcare Conference",
       summary: "Company will attend conference to discuss innovative oncology response approaches.",
-      date: "5 months ago",
+      date: getRelativeTime("2025-01-15"),
       link: "https://www.linkedin.com/company/recourse-biology/"
     },
     {
       title: "RB101 Development Milestone",
       summary: "Lead compound RB101 continues to show promising results in preclinical studies, maintaining 12-month timeline to IND filing.",
-      date: "6 months ago",
+      date: getRelativeTime("2024-12-15"),
       link: "https://www.linkedin.com/company/recourse-biology/"
     }
   ];
@@ -68,6 +86,20 @@ const Index = () => {
 
       {/* Gradient Separator */}
       <div className="h-24 bg-gradient-to-b from-transparent via-teal-50 to-white" />
+
+      {/* Company Description Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Recourse Biologics is committed to advancing precision therapeutics for oncology. Our lead molecule is <strong className="text-teal-600">RB101</strong>. RB101 is a first-in-class immunotherapeutic that increases professional killer cell persistence, memory formation, and cytotoxicity without systemic toxicity or exhaustion. RB101 is less than a year from IND.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              In addition to RB101, Recourse Biologics has created a pipeline of compelling, first-in-class candidates. This includes validated ADCs directed at novel tumor-selective targets, and an improved method of targeting and redirecting cytotoxic lymphocytes within the tumor microenvironment using our <strong className="text-teal-600">bispecific antibody platform.</strong>
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* News Section */}
       <section className="py-16 bg-white relative">

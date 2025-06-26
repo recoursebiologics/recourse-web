@@ -8,16 +8,16 @@ import { useLoadingState } from "@/hooks/useImageLoader";
 import { LazyImage } from "@/components/LazyImage";
 
 // Import team member headshots
-import westwickHeadshot from "/headshots/westwick.jpeg";
+import westwickHeadshot from "/headshots/westwick.jpg";
 import krupnickHeadshot from "/headshots/krupnick.jpg";
-import lazearHeadshot from "/headshots/lazear.jpg";
+import lazearHeadshot from "/headshots/lazear.png";
 import mooneyHeadshot from "/headshots/mooney.jpg";
 import watkinsHeadshot from "/headshots/watkins.png";
 
 // Import company logos
-import celgeneLogo from "/logos/celgene.jpg";
-import ucsdLogo from "/logos/ucsd_som.jpg";
-import courierLogo from "/logos/courier.jpg";
+import celgeneLogo from "/logos/celgene.png";
+import ucsdLogo from "/logos/ucsd_som.png";
+import courierLogo from "/logos/courier.png";
 import michiganLogo from "/logos/michigan_som.png";
 import upennLogo from "/logos/upenn.png";
 import dnatrixLogo from "/logos/dnatrix.png";
@@ -148,13 +148,13 @@ const About = () => {
                         {member.bio}
                       </p>
                       
-                      <div className="flex justify-center space-x-3 mb-4">
+                      <div className="flex justify-center items-center space-x-4 mb-4">
                         {member.logos.map((logo, logoIndex) => (
-                          <div key={logoIndex} className="h-8 w-auto">
+                          <div key={logoIndex} className="h-16 w-20 flex items-center justify-center">
                             <LazyImage
                               src={logo}
                               alt="Company logo"
-                              className="h-8 w-auto opacity-70"
+                              className="max-h-16 max-w-20 w-auto h-auto opacity-70 object-contain"
                             />
                           </div>
                         ))}
@@ -216,13 +216,13 @@ const About = () => {
                           {member.bio}
                         </p>
                         
-                        <div className="flex justify-center space-x-3 mb-4">
+                        <div className="flex justify-center items-center space-x-4 mb-4">
                           {member.logos.map((logo, logoIndex) => (
-                            <div key={logoIndex} className="h-8 w-auto">
+                            <div key={logoIndex} className="h-16 w-20 flex items-center justify-center">
                               <LazyImage
                                 src={logo}
                                 alt="Company logo"
-                                className="h-8 w-auto opacity-70"
+                                className="max-h-16 max-w-20 w-auto h-auto opacity-70 object-contain"
                               />
                             </div>
                           ))}

@@ -49,42 +49,26 @@ const Pipeline = () => {
               
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  Recourse Biologics has assembled a robust pipeline of first-in-class immunotherapeutics 
-                  designed to harness the body's natural tumor-killing capabilities. Our approach focuses 
-                  on enhancing professional killer cell persistence, memory formation, and cytotoxicity 
-                  without the systemic toxicity associated with traditional cancer treatments.
+                  Recourse Biologics has assembled a robust pipeline of first-in-class therapies based a common there: precision targeting for improved and safer tumor control.
                 </p>
                 
                 <p>
-                  <strong className="text-teal-600">RB101</strong>, our lead compound, represents a 
-                  breakthrough in immunotherapy design. Currently 12 months from IND filing, RB101 
-                  has demonstrated remarkable ability to increase killer cell persistence and memory 
-                  formation without exhaustion. This first-in-class immunotherapeutic targets tumor 
-                  associated macrophages in pancreatic cancer, addressing one of the most challenging 
-                  oncology indications.
+                  <strong className="text-teal-600">RB101</strong>, our lead compound, represents a breakthrough in immunotherapy design. Currently 12 months from IND filing, RB101 precisely stimulates killer cell persistence and memory formation without systemic toxicity or immune exhaustion.
                 </p>
                 
                 <p>
-                  Beyond RB101, our pipeline includes multiple programs targeting various immune cell 
-                  populations across different cancer types. Our <strong className="text-teal-600">bispecific 
-                  antibody platform</strong> provides an improved method of targeting and redirecting 
-                  cytotoxic lymphocytes within the tumor microenvironment, offering precision therapy 
-                  options for patients with limited treatment alternatives.
+                  In addition to RB101, our pipeline includes multiple optimized <strong className="text-teal-600">antibody-drug conjugates</strong> to novel targets expressed in large-market tumor indications (lung, ovary, breast, prostate and others). We have also created a <strong className="text-teal-600">bispecific antibody platform</strong> that dramatically improves redirecting cytotoxic lymphocytes without non-specific cytokine release that plagues existing therapies.
                 </p>
                 
                 <p>
-                  Each program in our pipeline is strategically designed to complement our core mission: 
-                  delivering precision immunotherapeutics that maximize therapeutic benefit while 
-                  minimizing patient burden. From discovery through clinical development, we maintain 
-                  rigorous standards for safety, efficacy, and manufacturability.
+                  Each program in our pipeline reflects our core mission: delivering novel, precision therapeutics that maximize therapeutic benefit while minimizing toxicity.
                 </p>
-                <strong className="text-teal-600">I just made this up... rewrite</strong>
               </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up animation-delay-600">
               <div className="bg-teal-50 rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-teal-600 mb-2">5</div>
+                <div className="text-2xl font-bold text-teal-600 mb-2">Robust Pipeline</div>
                 <div className="text-sm font-medium text-gray-700">Active Programs</div>
               </div>
               
