@@ -75,37 +75,7 @@ const About = () => {
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 relative flex flex-col">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="bg-white py-16 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up">
-              About <span className="text-teal-600">Recourse Biologics</span>
-            </h1>
-          </div>
-        </div>
-      </section>
 
-      {/* Company Description */}
-      <section className="py-16 relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-6 text-gray-600 text-lg leading-relaxed animate-fade-in-up animation-delay-300">
-            <p>
-              Recourse Biologics is committed to advancing new and improved therapies 
-              for oncology. Our lead molecule is <strong className="text-teal-600">RB101</strong>. 
-              RB101 is a first-in-class immunotherapeutic that increases professional killer cell 
-              persistence, memory formation, and cytotoxicity without systemic toxicity 
-              or exhaustion.
-            </p>
-            <p>
-              In addition to RB101, Recourse Biologics has created an improved method 
-              of targeting and redirecting cytotoxic lymphocytes within the tumor 
-              microenvironment using our <strong className="text-teal-600">bispecific 
-              antibody platform</strong>.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Team Section */}
       <section className="py-16 bg-gray-50 relative">

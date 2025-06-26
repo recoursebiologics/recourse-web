@@ -68,18 +68,15 @@ const Pipeline = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up animation-delay-600">
               <div className="bg-teal-50 rounded-lg p-6 text-center">
-                <div className="text-2xl font-bold text-teal-600 mb-2">Robust Pipeline</div>
-                <div className="text-sm font-medium text-gray-700">Active Programs</div>
+                <div className="text-lg font-bold text-teal-600">Robust Pipeline of Active Programs</div>
               </div>
               
               <div className="bg-emerald-50 rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-emerald-600 mb-2">12</div>
-                <div className="text-sm font-medium text-gray-700">Months to IND</div>
+                <div className="text-lg font-bold text-emerald-600">12 Months to First IND</div>
               </div>
               
               <div className="bg-cyan-50 rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-cyan-600 mb-2">1st</div>
-                <div className="text-sm font-medium text-gray-700">In Class</div>
+                <div className="text-lg font-bold text-cyan-600">All Candidates 1st in Class</div>
               </div>
             </div>
           </div>
