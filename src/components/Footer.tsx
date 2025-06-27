@@ -16,12 +16,11 @@ const Footer = () => {
                 className="h-8 w-auto mr-3"
               />
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            <p className="text-gray-600 text-sm leading-relaxed mb-4 italic">
               Recourse Biologics is committed to advancing new and improved
-              therapies for oncology. Our lead molecule is RB101, a
-              first-in-class immunotherapeutic that increases professional
-              killer cell persistence, memory formation, and cytotoxicity
-              without systemic toxicity or exhaustion.
+              therapies for oncology. Each program in our pipeline reflects our
+              core mission: delivering novel, precision therapeutics that
+              maximize therapeutic benefit while minimizing toxicity.
             </p>
           </div>
 
