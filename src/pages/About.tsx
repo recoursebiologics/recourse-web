@@ -38,15 +38,25 @@ const About = () => {
       title: "PhD | Co-founder and CEO",
       linkedin: "https://www.linkedin.com/in/john-westwick-aa3a471",
       headshot: westwickHeadshot,
-      logos: [celgeneLogo, resonant],
-      bio: "Senior R&D leader and CEO of multiple biotech firms, including Courier and Resonant Therapeutics. Led Courier's exit for $500M in cash and milestones.",
+      logos: [
+        { src: celgeneLogo, alt: "Celgene", className: "w-20" },
+        { src: resonant, alt: "Resonant", className: "w-36" },
+      ],
+      bio: "Senior R&D leader and CEO of multiple biotech firms, including Courier and Resonant Therapeutics. Led Courier's exit for $500M in cash and milestones. Over 40 years of experience translating cellular mechanisms research into breakthrough cancer and metabolic disease therapeutics.",
     },
     {
       name: "Sasha Krupnick",
       title: "MD | Co-founder and President",
       linkedin: "https://www.linkedin.com/in/alexander-krupnick-9370bb124",
       headshot: krupnickHeadshot,
-      logos: [courierLogo, umaryland_som],
+      logos: [
+        { src: courierLogo, alt: "Courier", className: "w-36" },
+        {
+          src: umaryland_som,
+          alt: "University of Maryland School of Medicine",
+          className: "w-36",
+        },
+      ],
       bio: "Professor of Surgery, University of Maryland, 20+ years of NIH funded translational research. Pioneered novel therapies to enhance immune response against tumors. Founder of Courier Therapeutics and aSKY Therapeutics, focused on precision therapies and immune modulation.",
     },
     {
@@ -54,7 +64,10 @@ const About = () => {
       title: "PhD | Co-founder and CSO",
       linkedin: "https://www.linkedin.com/in/elazear/",
       headshot: lazearHeadshot,
-      logos: [courierLogo, valo],
+      logos: [
+        { src: courierLogo, alt: "Courier", className: "w-36" },
+        { src: valo, alt: "Valo Health", className: "w-12" },
+      ],
       bio: "Designed RB101 and has led its development. Founder and VP of Research at Courier Therapeutics, acquired by Valo Health. Published over 30 papers and patents.",
     },
     {
@@ -62,7 +75,10 @@ const About = () => {
       title: "MBA | Acting CFO",
       linkedin: "https://www.linkedin.com/in/brian-mooney-18541aa",
       headshot: mooneyHeadshot,
-      logos: [dnatrixLogo, crossflo],
+      logos: [
+        { src: dnatrixLogo, alt: "DNAtrix", className: "w-24" },
+        { src: crossflo, alt: "Crossflo", className: "w-32" },
+      ],
       bio: "Over 30 years of senior management experience in life sciences, medical device and software industries as a CFO and COO; Managing Partner of a venture lending fund and a boutique merchant bank. Previously CFO at DNAtrix and CFO & COO at Crossflo Systems.",
     },
     {
@@ -70,7 +86,14 @@ const About = () => {
       title: "PhD | Co-founder and BOD Member",
       linkedin: "https://www.linkedin.com/in/dan-watkins-2880141",
       headshot: watkinsHeadshot,
-      logos: [mercuryLogo, dnatrixLogo],
+      logos: [
+        { src: dnatrixLogo, alt: "DNAtrix", className: "w-24" },
+        {
+          src: mercuryLogo,
+          alt: "Mercury Fund",
+          className: "w-36",
+        },
+      ],
       bio: "Venture Partner and co-founder, Mercury Fund. Founded multiple companies in biotech and AI. Initial investor and CEO of Courier Therapeutics. Current CEO of Pelagos Pharmaceuticals.",
     },
   ];
@@ -124,11 +147,11 @@ const About = () => {
                       
                       <div className="flex justify-center items-center space-x-4 mb-4">
                         {member.logos.map((logo, logoIndex) => (
-                          <div key={logoIndex} className="h-16 w-20 flex items-center justify-center">
+                          <div key={logoIndex} className="flex items-center justify-center">
                             <LazyImage
-                              src={logo}
-                              alt="Company logo"
-                              className="max-h-16 max-w-20 w-auto h-auto opacity-70 object-contain"
+                              src={logo.src}
+                              alt={logo.alt}
+                              className={`${logo.className} h-auto opacity-70 object-contain`}
                             />
                           </div>
                         ))}
@@ -192,11 +215,11 @@ const About = () => {
                         
                         <div className="flex justify-center items-center space-x-4 mb-4">
                           {member.logos.map((logo, logoIndex) => (
-                            <div key={logoIndex} className="h-16 w-20 flex items-center justify-center">
+                            <div key={logoIndex} className="flex items-center justify-center">
                               <LazyImage
-                                src={logo}
-                                alt="Company logo"
-                                className="max-h-16 max-w-20 w-auto h-auto opacity-70 object-contain"
+                                src={logo.src}
+                                alt={logo.alt}
+                                className={`${logo.className} h-auto opacity-70 object-contain`}
                               />
                             </div>
                           ))}
