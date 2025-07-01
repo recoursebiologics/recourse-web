@@ -73,7 +73,7 @@ const Index = () => {
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight animate-fade-in-up">
                   Primed for <span className="text-teal-600">Precision</span>
                 </h1>
-                <p className="text-lg lg:text-xl text-gray-700 leading-relaxed animate-fade-in-up animation-delay-300">
+                <p className="max-w-sm text-lg lg:text-xl text-gray-700 leading-relaxed animate-fade-in-up animation-delay-300">
                   Harnessing the body's tumor-killing cells with first-in-class
                   immunotherapeutics
                 </p>
