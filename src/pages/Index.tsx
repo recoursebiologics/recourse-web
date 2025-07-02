@@ -54,7 +54,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section
-        className="relative py-20 lg:py-32 h-[70vh] lg:h-[90vh] flex items-center"
+        className="relative py-12 sm:py-20 lg:py-32 h-[60vh] sm:h-[70vh] lg:h-[90vh] flex items-center"
         style={{
           backgroundImage: `url(${aiBiotechImage})`,
           backgroundSize: "cover",
@@ -69,11 +69,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="flex justify-start">
             <div className="max-w-lg">
-              <div className="space-y-6">
-                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight animate-fade-in-up">
+              <div className="space-y-4 sm:space-y-6">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight animate-fade-in-up">
                   Primed for <span className="text-teal-600">Precision</span>
                 </h1>
-                <p className="max-w-sm text-lg lg:text-xl text-gray-700 leading-relaxed animate-fade-in-up animation-delay-300">
+                <p className="max-w-sm text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed animate-fade-in-up animation-delay-300">
                   Harnessing the body's tumor-killing cells with first-in-class
                   immunotherapeutics
                 </p>
@@ -87,10 +87,10 @@ const Index = () => {
       <div className="h-24 bg-gradient-to-b from-transparent via-teal-50 to-white" />
 
       {/* Company Description Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
               Recourse Biologics is committed to advancing precision
               therapeutics for oncology. Our lead molecule is{" "}
               <strong className="text-teal-600">RB101</strong>. RB101 is a
@@ -99,7 +99,7 @@ const Index = () => {
               without systemic toxicity or exhaustion. RB101 is 12 months from
               IND.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
               In addition to RB101, Recourse Biologics has created a pipeline of
               compelling, first-in-class candidates. This includes validated
               ADCs directed at novel tumor-selective targets, and an improved
@@ -114,19 +114,19 @@ const Index = () => {
       </section>
 
       {/* News Section */}
-      <section className="py-16 bg-white relative">
+      <section className="py-12 sm:py-16 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up">
               Latest <span className="text-teal-600">News</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in-up animation-delay-150">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in-up animation-delay-150">
               Stay updated with our latest developments, conferences, and
               milestones
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up animation-delay-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 animate-fade-in-up animation-delay-300">
             {isNewsLoading
               ? // Show skeleton loaders while content is loading
                 Array.from({ length: 3 }).map((_, index) => (
@@ -136,18 +136,18 @@ const Index = () => {
                 newsItems.map((item, index) => (
                   <Card
                     key={index}
-                    className="hover:shadow-lg transition-all duration-300 hover:scale-105 border-teal-100"
+                    className="hover:shadow-lg transition-all duration-300 sm:hover:scale-105 border-teal-100"
                   >
-                    <CardHeader className="pb-3">
-                      <div className="flex items-center text-sm text-gray-500 mb-2">
-                        <Calendar className="w-4 h-4 mr-2" />
+                    <CardHeader className="pb-3 p-4 sm:p-6">
+                      <div className="flex items-center text-xs sm:text-sm text-gray-500 mb-2">
+                        <Calendar className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                         {item.date}
                       </div>
-                      <CardTitle className="text-lg font-semibold text-gray-900 leading-tight">
+                      <CardTitle className="text-base sm:text-lg font-semibold text-gray-900 leading-tight">
                         {item.title}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="p-4 sm:p-6 pt-0">
                       <p className="text-gray-600 text-sm leading-relaxed mb-4">
                         {item.summary}
                       </p>
@@ -165,12 +165,12 @@ const Index = () => {
                 ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <a
               href="https://www.linkedin.com/company/recourse-biology/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-medium rounded-lg transition-colors"
+              className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-teal-600 hover:bg-teal-700 text-white text-sm sm:text-base font-medium rounded-lg transition-colors"
             >
               Follow us on LinkedIn
               <ExternalLink className="w-4 h-4 ml-2" />

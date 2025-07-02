@@ -13,21 +13,21 @@ const Pipeline = () => {
       <Navigation />
 
       {/* Pipeline Section */}
-      <section className="py-16 relative">
+      <section className="py-12 sm:py-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up">
+          <div className="text-center mb-8 sm:mb-12">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 animate-fade-in-up">
               Our <span className="text-teal-600">Pipeline</span>
             </h1>
           </div>
 
-          <div className="mb-12">
+          <div className="mb-8 sm:mb-12">
             {!isPipelineImageLoaded && !pipelineImageError ? (
               <PipelineImageSkeleton />
             ) : pipelineImageError ? (
-              <div className="w-full h-96 bg-gray-100 rounded-xl shadow-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <p className="text-lg font-medium">
+              <div className="w-full h-64 sm:h-96 bg-gray-100 rounded-xl shadow-lg flex items-center justify-center">
+                <div className="text-center text-gray-500 px-4">
+                  <p className="text-base sm:text-lg font-medium">
                     Pipeline Image Unavailable
                   </p>
                   <p className="text-sm">Please try refreshing the page</p>
@@ -44,12 +44,12 @@ const Pipeline = () => {
 
           {/* Pipeline Explanation */}
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl shadow-sm p-8 mb-8 animate-fade-in-up animation-delay-450">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-white rounded-xl shadow-sm p-6 sm:p-8 mb-6 sm:mb-8 animate-fade-in-up animation-delay-450">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Our Development Pipeline
               </h2>
 
-              <div className="space-y-6 text-gray-600 leading-relaxed">
+              <div className="space-y-4 sm:space-y-6 text-gray-600 leading-relaxed text-sm sm:text-base">
                 <p>
                   Recourse Biologics has assembled a robust pipeline of
                   first-in-class therapies based on a common theme: precision

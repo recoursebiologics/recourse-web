@@ -105,17 +105,17 @@ const About = () => {
 
 
       {/* Team Section */}
-      <section className="py-16 bg-gray-50 relative">
+      <section className="py-12 sm:py-16 bg-gray-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4 animate-fade-in-up animation-delay-450">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 animate-fade-in-up animation-delay-450">
               Leadership Team
             </h2>
           </div>
           
           <div className="animate-fade-in-up animation-delay-600">
             {/* First row - 3 cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
               {isTeamLoading ? (
                 Array.from({ length: 3 }).map((_, index) => (
                   <TeamCardSkeleton key={`skeleton-top-${index}`} />
@@ -123,9 +123,9 @@ const About = () => {
               ) : (
                 teamMembers.slice(0, 3).map((member, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow flex flex-col">
-                  <CardContent className="p-6 flex flex-col flex-grow">
+                  <CardContent className="p-4 sm:p-6 flex flex-col flex-grow">
                     <div className="text-center flex-grow flex flex-col">
-                      <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-4 border-teal-100 relative">
+                      <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-3 sm:mb-4 overflow-hidden rounded-full border-4 border-teal-100 relative">
                         <LazyImage
                           src={member.headshot}
                           alt={member.name}
@@ -133,15 +133,15 @@ const About = () => {
                         />
                       </div>
                       
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
                         {member.name}
                       </h3>
                       
-                      <p className="text-teal-600 font-medium mb-3">
+                      <p className="text-sm sm:text-base text-teal-600 font-medium mb-3">
                         {member.title}
                       </p>
                       
-                      <p className="text-sm text-gray-600 mb-4 flex-grow">
+                      <p className="text-xs sm:text-sm text-gray-600 mb-4 flex-grow leading-relaxed">
                         {member.bio}
                       </p>
                       
@@ -183,7 +183,7 @@ const About = () => {
             
             {/* Second row - 2 cards centered */}
             <div className="flex justify-center">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-2xl w-full px-4 sm:px-0">
                 {isTeamLoading ? (
                   Array.from({ length: 2 }).map((_, index) => (
                     <TeamCardSkeleton key={`skeleton-bottom-${index}`} />
@@ -191,9 +191,9 @@ const About = () => {
                 ) : (
                   teamMembers.slice(3, 5).map((member, index) => (
                   <Card key={index + 3} className="hover:shadow-lg transition-shadow flex flex-col">
-                    <CardContent className="p-6 flex flex-col flex-grow">
+                    <CardContent className="p-4 sm:p-6 flex flex-col flex-grow">
                       <div className="text-center flex-grow flex flex-col">
-                        <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-4 border-teal-100 relative">
+                        <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-3 sm:mb-4 overflow-hidden rounded-full border-4 border-teal-100 relative">
                           <LazyImage
                             src={member.headshot}
                             alt={member.name}
@@ -201,15 +201,15 @@ const About = () => {
                           />
                         </div>
                         
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
                           {member.name}
                         </h3>
                         
-                        <p className="text-teal-600 font-medium mb-3">
+                        <p className="text-sm sm:text-base text-teal-600 font-medium mb-3">
                           {member.title}
                         </p>
                         
-                        <p className="text-sm text-gray-600 mb-4 flex-grow">
+                        <p className="text-xs sm:text-sm text-gray-600 mb-4 flex-grow leading-relaxed">
                           {member.bio}
                         </p>
                         

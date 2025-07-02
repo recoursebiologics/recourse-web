@@ -19,12 +19,12 @@ const Navigation = () => {
   return (
     <nav className="bg-white/90 backdrop-blur-sm shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-20 sm:h-24">
           <Link to="/" className="flex items-center">
             <img 
               src={logoImage} 
               alt="Recourse Biologics"
-              className="h-12 w-auto"
+              className="h-10 sm:h-12 w-auto"
             />
           </Link>
 
@@ -54,7 +54,8 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-teal-600 transition-colors"
+              className="text-gray-700 hover:text-teal-600 transition-colors p-2 rounded-lg hover:bg-gray-100"
+              aria-label="Toggle navigation menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -64,16 +65,16 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t shadow-lg">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`relative block px-4 py-3 text-lg font-medium transition-all duration-300 group ${
+                  className={`relative block px-4 py-4 text-base font-medium transition-all duration-300 rounded-lg touch-manipulation ${
                     isActive(item.path)
                       ? "text-teal-600 bg-teal-50 border-l-4 border-teal-600"
-                      : "text-gray-700 hover:text-teal-600 hover:bg-teal-50 hover:translate-x-2"
+                      : "text-gray-700 hover:text-teal-600 hover:bg-teal-50 active:bg-teal-100"
                   }`}
                 >
                   {item.name}
