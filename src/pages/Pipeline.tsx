@@ -3,10 +3,12 @@ import Footer from "@/components/Footer";
 import { LazyImage } from "@/components/LazyImage";
 import { PipelineImageSkeleton } from "@/components/Skeleton";
 import { useImageLoader } from "@/hooks/useImageLoader";
+import { useIsMobile } from "@/hooks/use-mobile";
 import pipelineImage from "/Pipeline.png";
 
 const Pipeline = () => {
   const { isLoaded: isPipelineImageLoaded, hasError: pipelineImageError } = useImageLoader(pipelineImage);
+  const isMobile = useIsMobile();
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 relative flex flex-col">
@@ -34,11 +36,16 @@ const Pipeline = () => {
                 </div>
               </div>
             ) : (
-              <LazyImage
-                src={pipelineImage}
-                alt="Recourse Biologics Pipeline"
-                className="w-full h-auto object-contain rounded-xl shadow-lg animate-scale-in animation-delay-300"
-              />
+              <div className={isMobile ? "w-full overflow-auto" : ""}>
+                <LazyImage
+                  src={pipelineImage}
+                  alt="Recourse Biologics Pipeline"
+                  className={isMobile 
+                    ? "w-[1200px] h-auto rounded-xl shadow-lg animate-scale-in animation-delay-300"
+                    : "w-full h-auto object-contain rounded-xl shadow-lg animate-scale-in animation-delay-300"
+                  }
+                />
+              </div>
             )}
           </div>
 
