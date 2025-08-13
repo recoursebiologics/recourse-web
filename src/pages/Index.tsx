@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Calendar } from "lucide-react";
 import { NewsCardSkeleton } from "@/components/Skeleton";
 import { useLoadingState } from "@/hooks/useImageLoader";
+import { SEO } from "@/components/SEO";
 import aiBiotechImage from "/ai_biotech.png";
 
 const Index = () => {
@@ -50,6 +51,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white relative flex flex-col">
+      <SEO 
+        title="Recourse Biologics - Primed for Precision"
+        description="Harnessing the body's tumor-killing cells with first-in-class immunotherapeutics. RB101 is 12 months from IND."
+        canonical="/"
+      />
       <Navigation />
 
       {/* Hero Section */}

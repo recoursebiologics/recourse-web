@@ -4,6 +4,7 @@ import { LazyImage } from "@/components/LazyImage";
 import { PipelineImageSkeleton } from "@/components/Skeleton";
 import { useImageLoader } from "@/hooks/useImageLoader";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { SEO } from "@/components/SEO";
 import pipelineImage from "/Pipeline.png";
 
 const Pipeline = () => {
@@ -12,6 +13,11 @@ const Pipeline = () => {
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 relative flex flex-col">
+      <SEO 
+        title="Pipeline - Recourse Biologics"
+        description="Our robust pipeline of first-in-class therapies for precision tumor targeting. RB101 is 12 months from IND filing."
+        canonical="/pipeline"
+      />
       <Navigation />
 
       {/* Pipeline Section */}

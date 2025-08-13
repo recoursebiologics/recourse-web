@@ -6,6 +6,7 @@ import { Linkedin, ExternalLink } from "lucide-react";
 import { TeamCardSkeleton } from "@/components/Skeleton";
 import { useLoadingState } from "@/hooks/useImageLoader";
 import { LazyImage } from "@/components/LazyImage";
+import { SEO } from "@/components/SEO";
 
 // Import team member headshots
 import westwickHeadshot from "/headshots/westwick.jpg";
@@ -100,6 +101,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 relative flex flex-col">
+      <SEO 
+        title="About - Recourse Biologics"
+        description="Meet our leadership team - experienced biotech executives advancing precision therapeutics for oncology."
+        canonical="/about"
+      />
       <Navigation />
       
 
